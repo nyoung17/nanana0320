@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home/css/main03.css">
+    <title>2주차</title>
+</head>
+<body>
+    <header>
+        <div id='logo'>
+          <a href='#'><img src='home/img/logo.png' width='300' height='70'></a>
+        </div>
+
+        <nav id='menus'>
+
+          <div id='top_menu'>
+            로그인 | 회원가입 | 공지사항
+
+          </div>
+          <ul id='main_menu'>
+            <li><a href='#'>준비</a></li>
+            <li><a href='#'>여행지</a></li>
+            <li><a href='#'>후기</a></li>
+          </ul>
+        </nav>
+        </header>
+
+          <img src="home/img/star.png" alt="Image" class="image">
+
+          <script>
+            window.addEventListener('scroll', function() {
+      const image = document.querySelector('.image');
+      const scrollY = window.scrollY;
+      image.style.transform = `translate(-50%, calc(-50% - ${scrollY}px))`;
+    });
+          </script>
+        <div class='clear'></div>
+        <footer id="footer">
+        </footer>
+      <script>
+          const footer = document.querySelector('#footer');
+          const showClass = 'show';
+
+          function toggleFooter() {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+              footer.classList.add(showClass);
+            } else {
+              footer.classList.remove(showClass);
+            }
+          }
+
+          window.addEventListener('scroll', toggleFooter);
+          window.addEventListener('resize', toggleFooter);
+        </script>
+</body>
+
+</html>
